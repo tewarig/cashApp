@@ -164,7 +164,7 @@ body {
 
 @media (max-width: 768px) {
   .body{
-    overflow: hidden;
+    overflow: scroll;
     background-image: url(./assets/bgImage.svg);
     background-repeat: no-repeat;
   }
@@ -200,7 +200,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: none;
+    overflow: scroll;
   }
   .heroText{
     color: var(--white);
@@ -231,4 +231,7 @@ body {
  .termsAndConditions{
      display: none;
    }
+  .socialIcons{
+    padding-bottom: 50px;
+  }
 }
