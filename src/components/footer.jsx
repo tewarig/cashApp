@@ -1,5 +1,5 @@
 import appleLogo from "../assets/socials/appleStore.svg";
-import playStoreLogo from "../assets/socials/playStore.svg";
+import playStoreLogo from "../assets/socials/playstore.svg";
 import downArrow from "../assets/socials/downArrow.svg";
 import twitch from "../assets/socials/twitch.svg";
 import twitter from "../assets/socials/twitter.svg";
