@@ -6,6 +6,7 @@ import cubes from "./assets/cubes.svg";
 import pillar from "./assets/pillar.svg";
 import stairs from "./assets/stairs.svg";
 import phone from "./assets/phone.png";
+import Footer from './components/footer';
 
 function App() {
  const navBarElements = ["SignIn", "legal", "license", "security","careers","press","support","status","codeblog"];
@@ -26,6 +27,7 @@ function App() {
          Cash <br/> <div className='heroTextSpecific'>App</div>
 
        </div>
+      <Footer/>
       </div>
    
       <img src={cube} alt="cube" className='cube'/>

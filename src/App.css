@@ -1,14 +1,23 @@
 :root {
   --black: #000000;
   --white: #ffffff;
-
+  --grey: #B6B6B6;
+  --zLow: -1;
+  --zMiddle: 0;
+  --zTop: 1;
+  --zTopMost: 2;
 }
-
+html{
+  background-color: var(--black);
+}
 body {
-  margin: 0px;
   font-family: 'Martel Sans', sans-serif;
+  font-family: 'Signika', sans-serif;
+  margin: 0px;
+  font-weight: 800;
   text-transform: uppercase;
   font-weight: bold;
+  overflow: hidden;
 }
 
 .container {
@@ -44,11 +53,12 @@ body {
   word-wrap: break-word;
   line-height: 1;
   text-align: center;
-
+  line-height: 13.375rem;
+  letter-spacing: 0.03125rem;
 }
 .heroTextSpecific{
   position: relative;
-  z-index: 2;
+  z-index: var(--zTopMost);
 }
 .cashAppDemoPhone{
   position: absolute; 
@@ -58,7 +68,7 @@ body {
   margin-right: auto; 
   width: 30rem;
   height: 33rem;
-  z-index: 0;
+  z-index: var(--zMiddle);
   transform: rotate(2deg);
 }
 .navBarElement{
@@ -76,11 +86,142 @@ body {
 }
 .cubes{
   position: absolute;
-  bottom: 8rem;
-  left: 15rem;
+  bottom: 4rem;
+  left: 10rem;
+  z-index: var(--zMiddle);
 }
 .pillars{
   position: absolute;
-  bottom: 8rem;
+  bottom: 0rem;
   right: 15rem;
+}
+/* footer */
+.footer{
+ position: absolute;
+ bottom: 0;
+ display: flex;
+ width: 100%;
+ justify-content: space-between;
+ align-items: center;
+ flex-direction:row;
+ margin-bottom: 1rem;
+}
+
+.termsAndConditions{
+  color: var(--grey);
+  font-family: Mulish;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 0.8125rem; /* 130% */
+  width: 22.69rem;
+  z-index: var(--zTop);
+  margin-left: 10rem;
+}
+.storeLink{
+  color: var(--white);
+  display: flex;
+  gap: 1.25rem;
+  margin-left: 2.5rem;
+}
+.appStoreButtons {
+  border-radius: 4px;
+  border: 1px solid var(--white);
+  background: var(--black);
+  color: var(--white);
+  display: inline-flex;
+  width: 10.50rem;
+  max-width: 12.25rem;
+  height: 3.125rem;
+  padding: 1.5625rem;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Martel Sans', sans-serif;
+  text-transform: uppercase;
+  z-index: var(--zTop);
+  gap: 1rem;
+  white-space: nowrap;
+}
+.downArrow{
+  position: absolute;
+  position: absolute;
+  top: 50%;  
+  left: 50%; 
+  transform: translate(-50%, -50%);
+}
+.socialIcons{
+  display: flex;
+  gap: 1.25rem;
+  margin: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .body{
+    overflow: hidden;
+    background-image: url(./assets/bgImage.svg);
+    background-repeat: no-repeat;
+  }
+  .cube{
+   display: none;
+  }
+  .stairs{
+  display: none;
+  }
+  .cubes{
+    display: none;
+  }
+  .pillars{
+    display: none;
+  } 
+  .footer{
+    background-color: var(--black);
+    position: initial;
+    display: flex;
+    flex-direction: column;
+  }
+  .cashAppDemoPhone{
+    transform: rotate(-20deg);
+    position: relative;
+    margin-top: 10rem;
+    width: 25rem;
+    height: 25rem;
+    justify-self: center;
+  }
+
+  .heroTextContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: none;
+  }
+  .heroText{
+    color: var(--white);
+    font-size: 5rem;
+    word-wrap: break-word;
+    line-height: 1;
+    text-align: center;
+    line-height: 5.375rem;
+    letter-spacing: 0.03125rem;
+  }
+  .heroText{
+    width: 100%;
+    height: 100%;
+  }
+  .downArrow{
+    display: none;
+  }
+  .storeLink{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0px;
+    margin-top: 2rem;
+  }
+  .navBarElement{
+    display: none;
+  }
+
+ .termsAndConditions{
+     display: none;
+   }
 }
